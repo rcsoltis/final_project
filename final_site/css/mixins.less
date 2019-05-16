@@ -1,0 +1,96 @@
+// out: null
+
+/* Parametric mixin for headings */
+
+.headingStyle(@paramColor: #000; @paramSize: 1em) {
+    color: @paramColor; // this accepts a font color passed through as an argument
+    font-size: @paramSize; // this accepts a font size passed through as an argument
+    font-weight: bold; // this is static code... not everything has to be dynamic!
+    line-height: @paramSize; // this reuses the same font size as before to change line height
+    margin-top: @paramSize / 6;
+    margin-bottom: @paramSize / 6;
+    text-transform: uppercase;
+}
+
+/* End parametric mixin for headings */
+
+/* Parametric mixin for nav */
+
+.boxStyle(@paramRadius: 5px; @paramBackcolor: #c0c0c0; @paramShadow: 5px 5px #a9a9a9) { 
+    border-radius: @paramRadius;
+    background-color: @paramBackcolor;
+    box-shadow: @paramShadow;
+}
+
+/* End parametric mixin for nav */
+
+/* Parametric mixin for gradient */
+
+.gradient2 (@paramAngle: left; @paramStartcolor: #ccc; @paramEndcolor: #aaa) {
+    background-image: linear-gradient(@paramAngle, @paramStartcolor, @paramEndcolor);
+}
+
+/* End parametric mixin for gradient */
+
+/* expand feature images*/
+.expand() {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+    &:hover {
+      transform: scale(1.5); /* (125% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+}
+
+/*used for image*/
+.transparent () {
+    opacity: 0.7;
+}
+
+/* text emphasis*/
+.underlineItalic () {
+    text-decoration: underline;
+    font-style: italic;    
+}
+
+/* used for h2*/
+.uppercaseBold () {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* main image*/
+.imageFlip () {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+/* decoration under the h2s*/
+.borderBottom () {
+    border-bottom: 2px solid @color1;
+    margin: .5em 0 1.25em 0;
+}
+
+/* removed this mixin for nav buttons
+.borderRadius () {
+    border-radius: 5px;
+}
+*/
+
+/*square list types*/
+.listType () {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+/*behind main image in header*/
+.gradient () {
+    background: linear-gradient(@color2, @color5);
+}
+
+

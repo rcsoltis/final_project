@@ -1,0 +1,456 @@
+/*
+
+File Name: style.css
+Date: 4/20/19
+Programmer: CARY SOLTIS
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+
+
+/* MOBILE STYLESHEET*/
+
+body {
+    font: 16px 'Open Sans', sans-serif;
+    color: @color1;
+    background-color: @color2;
+    margin: 0;
+}
+
+/*expandible nav for smaller screens*/
+nav {
+
+    /* Style the navigation menu */
+    background-color: @color2;
+    padding-top: 2.5em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+
+    /* Hide the links inside the navigation menu mobile only */
+    #navLinks {
+        display: none;
+        width: 100%;
+    }
+
+    ul {
+        background-color: @color2;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            background-color: @color2;
+            padding-top: .9em;
+            padding-left: .75em;
+
+            a {
+                color: @color1;
+                font-size: 1.25em;
+                text-decoration: none;
+
+                &:hover {
+                    color: @color3;
+                }
+
+                &:active {
+                    background-color: @color1;
+                    color: @color2;
+                }
+            }
+        }
+    }
+
+    /* Style the hamburger menu */
+    a.icon {
+        background: @color2;
+        color: @color1;
+        font-size: 2em;
+        margin-bottom: 2em;
+        padding-right: 4%;
+        padding-top: 4%;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        right: 0;
+        top: 0;
+        /* Add color on mouse-over */
+    }
+
+    /*End navbar*/
+}
+
+header {
+    display: block;
+    padding-top: 1em;
+}
+
+/*style title*/
+h1 {
+    color: @color3;
+    background-color: @color4;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+    margin-top: 1em;
+    padding: 2.25em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main {
+
+    h2 {
+        font-size: 1.75em;
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    section {
+        padding: .25em 1em 1em 1em;
+        border-bottom: solid .5em @color3;
+
+        &:nth-child(odd) {
+            background-color: @color1;
+            color: @color2;
+        }
+
+        input[type="text"] {
+            background-color: @lightColor4;
+            margin: 1em 0;
+            padding-top: 1em;
+            width: 100%;
+        }
+
+        input[type="radio"] {
+            background-color: @lightColor4;
+            margin: 1.25em .2em .2em 1em;
+            padding-top: 1em;
+        }
+
+        input[type=submit] {
+            background-color: @color2;
+            border: solid .1em @color3;
+            color: @color1;
+            font-size: 1.2em;
+            margin-top: 1em;
+        }
+
+        li {
+            margin-left: 2em;
+            padding-left: 1em;
+
+            a {
+                list-style-type: square;
+            }
+        }
+    }
+}
+
+/*style footer*/
+footer {
+    background-color: @color2;
+    color: @color1;
+    text-align: center;
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    aside {
+        background-color: @color1;
+        border-bottom: solid .5em @color3;
+        color: @color2;
+        display: block;
+        margin-bottom: 2em;
+        margin-top: 3em;
+
+        p {
+            background-color: @color2;
+            color: @color1;
+        }
+    }
+}
+
+/*styling for comment form*/
+
+form {
+
+    h3 {
+        margin-top: 1em;
+    }
+
+    text-align: left;
+    margin: 1em;
+
+
+    label {
+        float: left;
+        padding-top: 2em;
+        width: 100%;
+    }
+
+    input[type="text"] {
+        background-color: @lightColor4;
+        margin-top: 1em;
+        padding-top: 1em;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        background-color: @color1;
+        border: solid .1em @color3;
+        color: @color2;
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+
+    textarea {
+        background-color: @lightColor4;
+        box-sizing: border-box;
+        margin-top: 1em;
+        width: 100%;
+    }
+
+}
+
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+
+    body {
+        font-size: 1.25em;
+        line-height: 175%;
+    }
+
+    /*style nav to be inline on screens larger than mobile*/
+
+    nav {
+        z-index: 1;
+
+        ul {
+            background-color: @color2;
+            float: right;
+            padding-bottom: 2%;
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            font-size: .6em;
+
+            a {
+
+                &:hover {
+                    color: @color3;
+                }
+
+                &:focus {
+                    color: #fff;
+                }
+            }
+        }
+
+        #navLinks {
+            display: inline;
+        }
+
+        a.icon {
+            display: none;
+        }
+    }
+
+    h1 {
+        padding: 2.75em;
+    }
+
+    main {
+
+        h2 {
+            font-size: 2em;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        section {
+            padding: .25em 1.25em 1em 1.25em;
+        }
+    }
+
+    input[type="text"] {
+        background-color: @lightColor4;
+        margin: 1em 0;
+        padding-top: 5em;
+        width: 90%;
+    }
+
+    footer {
+        .fa {
+            padding: 1em;
+            font-size: 1.75em;
+            text-decoration: none;
+        }
+    }
+
+    .col {
+        margin: 0;
+    }
+
+    .section,
+    .group {
+
+        display: flex;
+    }
+
+}
+
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 1.5em;
+        line-height: 200%;
+    }
+
+    nav {
+
+        ul {
+            padding-left: 5%;
+            padding-bottom: 2%;
+
+            li {
+                margin-right: 2%;
+                padding-bottom: .5em;
+                font-size: .9em;
+
+                &:last-child {
+                    margin-left: .5em;
+                }
+            }
+        }
+    }
+
+    header {
+        margin-top: 1em;
+
+        h1 {
+            padding: 3em;
+        }
+    }
+
+    main {
+        section {
+            p {
+                padding: 0 1em;
+            }
+
+            form {
+
+                label {
+                    display: inline-block;
+                    /*padding: 0 .5em 0 1em;*/
+                    float: none;
+                    font-size: 1.25em;
+                    width: 30%;
+
+                    &:last-of-type {
+                        width: 65%;
+                    }
+                }
+
+
+                input[type="text"],
+                input[type="email"] {
+                    background-color: @lightColor4;
+                    padding-top: 2em;
+                    width: 70%;
+                }
+
+                input[type="radio"] {
+                    border: 0;
+                    height: 4em;
+                    width: 3%;
+                }
+
+                input[type=submit] {
+                    margin-left: 1.2em;
+                    font-size: 1.75em;
+                }
+            }
+        }
+    }
+
+
+    /*style footer*/
+
+    footer {
+        h3 {
+            padding-top: 1em;
+        }
+
+        aside {
+            background-color: @color1;
+            margin: 0;
+            flex: 1;
+
+            p {
+                background-color: @color1;
+                color: @color2;
+                font-size: .55em;
+                margin-bottom: 2em;
+            }
+        }
+
+        form {
+
+
+            label {
+                display: inline-block;
+                padding-left: .25em;
+                float: none;
+                font-size: 1.5em;
+                width: 30%;
+            }
+
+            input[type="text"] {
+                background-color: @lightColor4;
+                padding-top: 2em;
+                width: 65%;
+            }
+
+            textarea {
+                background-color: @lightColor4;
+                padding-top: 2em;
+                width: 65%;
+            }
+
+            input[type=submit] {
+                margin-left: 1.3em;
+                font-size: 1.75em;
+            }
+        }
+
+
+
+    }
+
+
+
+}
