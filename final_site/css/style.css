@@ -43,6 +43,7 @@ nav {
   width: 100%;
   z-index: 2;
   /* Hide the links inside the navigation menu mobile only */
+  /*Style nav links*/
   /* Style the hamburger menu */
   /*End navbar*/
 }
@@ -93,31 +94,42 @@ header {
 /*style title*/
 h1 {
   color: #ff0000;
-  background-color: #808080;
+  /*background-color: @color4;*/
   font-family: 'Lato', sans-serif;
   font-size: 2em;
   margin-top: 1em;
-  padding: 2.25em;
+  padding: .5em;
   text-align: center;
   text-transform: uppercase;
 }
+main {
+  /*Style main sections*/
+}
 main h2 {
   font-size: 1.75em;
-  padding: 1em 0;
+  padding: .5em 0;
   text-align: center;
+}
+main h4 {
+  font-weight: bold;
 }
 main section {
   padding: .25em 1em 1em 1em;
   border-bottom: solid 0.5em #ff0000;
+  /*Style for the resgitration forms*/
+  /*Style lists under Pricing info.*/
 }
-main section:nth-child(odd) {
+main section:nth-of-type(odd) {
   background-color: #ffffff;
   color: #000000;
 }
+main section label {
+  padding: .3em;
+}
 main section input[type="text"] {
   background-color: #b3b3b3;
-  margin: 1em 0;
-  padding-top: 1em;
+  margin: .75em 0;
+  padding-top: .75em;
   width: 100%;
 }
 main section input[type="radio"] {
@@ -126,13 +138,14 @@ main section input[type="radio"] {
   padding-top: 1em;
 }
 main section input[type=submit] {
-  background-color: #000000;
+  background-color: #ffffff;
   border: solid 0.1em #ff0000;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.2em;
   margin-top: 1em;
 }
 main section li {
+  font-size: .9em;
   margin-left: 2em;
   padding-left: 1em;
 }
@@ -144,6 +157,7 @@ footer {
   background-color: #000000;
   color: #ffffff;
   text-align: center;
+  padding: .25em 1em 1em 1em;
 }
 footer h3 {
   font-size: 1.5em;
@@ -160,22 +174,23 @@ footer aside p {
   background-color: #000000;
   color: #ffffff;
 }
-/*styling for comment form*/
+/*styling for comment form in footer*/
 form {
   text-align: left;
-  margin: 1em;
 }
 form h3 {
   margin-top: 1em;
 }
 form label {
   float: left;
-  padding-top: 2em;
+  padding-top: .75em;
+  margin-top: 1em;
   width: 100%;
 }
 form input[type="text"] {
   background-color: #b3b3b3;
-  margin-top: 1em;
+  font-size: 1em;
+  margin-top: .75em;
   padding-top: 1em;
   width: 100%;
 }
@@ -184,13 +199,67 @@ form input[type=submit] {
   border: solid 0.1em #ff0000;
   color: #000000;
   font-size: 1.2em;
-  margin-top: 1em;
+  margin: 1em 0;
 }
 form textarea {
   background-color: #b3b3b3;
   box-sizing: border-box;
   margin-top: 1em;
   width: 100%;
+}
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #000000;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #808080;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  border-color: #888;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 2px #ff0000;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-css option {
+  font-weight: normal;
+}
+/*end style select drop-downs for forms*/
+/*specific style for section with id=home*/
+#home img {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+#home p {
+  color: #ff0000;
+  font-size: 1em;
+  margin: .25em .5em;
+  text-align: center;
+}
+#home p:first-of-type {
+  font-size: 1.2em;
 }
 /*
 
@@ -201,12 +270,12 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
 */
 @media only screen and (min-width: 481px) {
   body {
-    font-size: 1.25em;
-    line-height: 175%;
+    font-size: 1.5em;
   }
   /*style nav to be inline on screens larger than mobile*/
   nav {
     z-index: 1;
+    padding-top: .5em;
   }
   nav ul {
     background-color: #000000;
@@ -231,33 +300,146 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
     display: none;
   }
   h1 {
-    padding: 2.75em;
+    padding: 1.5em;
   }
   main h2 {
-    font-size: 2em;
+    font-size: 1.25em;
     padding: 1em 0;
     text-align: center;
+  }
+  main p {
+    font-size: .75em;
+    line-height: 150%;
   }
   main section {
     padding: .25em 1.25em 1em 1.25em;
   }
+  main section li {
+    font-size: .75em;
+    line-height: 200%;
+    margin-left: 1em;
+    padding-right: 1.9em;
+  }
+  /*style for registration form in tablet size*/
   input[type="text"] {
     background-color: #b3b3b3;
     margin: 1em 0;
     padding-top: 5em;
     width: 90%;
   }
+  /*Style for gallery of images*/
+  * {
+    box-sizing: border-box;
+  }
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.75em transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* Caption text */
+  .text {
+    color: #ffffff;
+    font-size: .8em;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #ffffff;
+    font-size: .75em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /*End styling of gallery*/
+  /*specific styling for footer in tablet view*/
   footer .fa {
     padding: 1em;
     font-size: 1.75em;
     text-decoration: none;
   }
+  /*minor style adjustments using classes used in the grid layout - not to add more classes for additional styling*/
   .col {
     margin: 0;
   }
   .section,
   .group {
     display: flex;
+  }
+  .section p,
+  .group p {
+    padding-right: .75em;
   }
 }
 /*
@@ -269,11 +451,11 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
 */
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.75em;
     line-height: 200%;
   }
   nav ul {
-    padding-left: 5%;
+    padding-left: 4%;
     padding-bottom: 2%;
   }
   nav ul li {
@@ -288,37 +470,50 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
     margin-top: 1em;
   }
   header h1 {
-    padding: 3em;
+    padding: .5em;
+    letter-spacing: .2em;
+  }
+  main section {
+    /*Style registration form in desktop view*/
   }
   main section p {
     padding: 0 1em;
+  }
+  main section li {
+    font-size: .75em;
   }
   main section form label {
     display: inline-block;
     /*padding: 0 .5em 0 1em;*/
     float: none;
-    font-size: 1.25em;
+    font-size: 1em;
+    padding-top: 0;
     width: 30%;
-  }
-  main section form label:last-of-type {
-    width: 65%;
+    /* &:last-of-type {
+                        width: 65%;
+                    WASN'T WORKING
+                    }*/
   }
   main section form input[type="text"],
   main section form input[type="email"] {
     background-color: #b3b3b3;
-    padding-top: 2em;
-    width: 70%;
-  }
-  main section form input[type="radio"] {
-    border: 0;
-    height: 4em;
-    width: 3%;
+    padding-top: .65em;
+    width: 60%;
   }
   main section form input[type=submit] {
     margin-left: 1.2em;
     font-size: 1.75em;
   }
-  /*style footer*/
+  main section form .select-css {
+    float: right;
+    width: 60%;
+    margin-right: 10%;
+    margin-top: 4%;
+  }
+  /*style footer in desktop*/
+  footer {
+    /*style footer form in desktop view*/
+  }
   footer h3 {
     padding-top: 1em;
   }
@@ -342,7 +537,7 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
   }
   footer form input[type="text"] {
     background-color: #b3b3b3;
-    padding-top: 2em;
+    padding-top: .75em;
     width: 65%;
   }
   footer form textarea {
@@ -353,5 +548,11 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
   footer form input[type=submit] {
     margin-left: 1.3em;
     font-size: 1.75em;
+  }
+  footer form .select-css {
+    float: right;
+    width: 65%;
+    margin-right: 5%;
+    margin-top: 9%;
   }
 }

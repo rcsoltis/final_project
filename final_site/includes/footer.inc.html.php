@@ -1,18 +1,25 @@
  <footer>
-     <h3>Header (h3)</h3>
+     <h3>Question or Comment?</h3>
 
-     <form method="post" id="contact" action="">
-         <label>First name:</label><input type="text" name="fname">
-         <label>Last name:</label><input type="text" name="lname">
-         <label>Question or Comment?</label><textarea rows="6"></textarea><br>
-         <label>Role:</label>
-                <select id="getRole">
-                    <option>Race Role</option>
-                    <option>Athlete</option>
-                    <option>Volunteer</option>
-                </select><br>
-        
-         <input type="submit" value="Submit">
+     <form method="post" id="contact" action="includes/comments/comments.php">
+         <label for="firstname">First name:</label><input type="text" id="firstname" name="firstname">
+
+         <label for="lastname">Last name:</label><input type="text" id="firstname" name="lastname">
+
+         <label for="e_mail">E-mail:</label><input type="text" id="e_mail" name="e_mail">
+
+         <label for="comment">Question or Comment?</label><textarea type="text" id="comment" name="comment" rows="6"></textarea><br>
+
+         <!--<label>Role:</label>
+
+         <select size="1" class="select-css" id="role_type" name="role_type">
+             <option>Event Role</option>
+             <option value="athlete">Athlete</option>
+             <option value="volunteer">Volunteer</option>
+              <option value="volunteer">Volunteer</option>
+         </select><br>-->
+
+         <input class="mysubmit" type="submit" value="Submit">
      </form>
      <div class="section group">
          <aside class="col span_4_of_12">
